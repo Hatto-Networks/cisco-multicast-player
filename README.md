@@ -4,7 +4,7 @@ This bash script lets you stream audio to Cisco IP Phones.
 Most Cisco enterprise phones have a feature to play live audio via multicast RTP, primarily for paging. This script sets up a RTP server using VLC and sends a POST request to defined phone(s) to start listening to the stream.
 
 # Instructions
-These instructions are meant for Linux/Mac. You'll need [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) to run this on Windows. 
+These instructions are meant for Linux. You'll want to use [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) to run this on Windows. This script will not work correctly on macOS, running a Linux VM is recommended as a workaround for now.
 
 First, install the required dependencies:
 ```
@@ -14,8 +14,8 @@ sudo apt install -y curl ffmpeg vlc
 # Arch Linux:
 sudo pacman -Sy curl ffmpeg vlc
 
-# macOS:
-brew install curl ffmpeg vlc
+# Fedora/RHEL:
+sudo dnf install -y curl ffmpeg vlc
 ```
 Clone the repo, and run `chmod +x ./broadcast.sh` inside the folder. That's it, you're done!
 
